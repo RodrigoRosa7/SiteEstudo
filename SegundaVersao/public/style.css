@@ -71,7 +71,7 @@ header div, .links {
 
 #wrapper p {
   max-width: 500px;
-  margin: 32px auto;
+  margin: 22px auto;
   font-size: 24px;
   line-height: 34px;
   font-weight: normal;
@@ -79,10 +79,10 @@ header div, .links {
 }
 
 #links-footer {
-  margin-top: 10px;
+  margin: 10px 10px;
 }
 
-#links-footer a:last-child {
+#links-footer a:nth-child(2) {
   border-bottom: 1px solid var(--color-green);
   margin: 8px 2px;
 }

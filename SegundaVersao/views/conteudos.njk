@@ -1,58 +1,46 @@
-<!DOCTYPE html>
+{% extends "layout.njk" %}
 
-<html>
-  <head>
-    <title>Rodrigo da Rosa</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-  </head>
+{% block head %}
+  <title>Conteúdos - Estudo exemplo</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
 
-  <body>
-    <header>
-      <div class="links">
-        <a href="index.html">Sobre</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="conteudos.html">Conteúdos</a>
-      </div>
-    </header>
-
-    <section class="cursos">
-      <div class="curso" id="starter">
-        <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Starter">
-      </div>
-      
-      <div class="curso" id="launchbase">
-        <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="Starter">
-      </div>
-
-      <div class="curso" id="gostack">
-        <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="Starter">
-      </div>
-    </section>
-
-    <div class="modal-overlay">
-      <div class="modal">
-        <a class="close-modal">
-          <span class="material-icons">
-            close
-          </span>
-        </a>
-
-        <div class="modal-content">
-          <iframe src="" frameborder="0"></iframe>
-        </div>
-      </div>
+{% block content %}
+  <section class="cursos">
+    <div class="curso" id="starter">
+      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Starter">
     </div>
-
-    <div id="links-footer" class="links">
-      <a href="https://github.com/RodrigoRosa7" target="_blank"><img src="assets/github.png" alt="Github"></a>
-      <a href="https://github.com/RodrigoRosa7" target="_blank">Github</a>
-    </div>
-
-    <script src="scripts.js"></script>
     
-  </body>
+    <div class="curso" id="launchbase">
+      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="Starter">
+    </div>
 
-</html>
+    <div class="curso" id="gostack">
+      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="Starter">
+    </div>
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+        <span class="material-icons">
+          close
+        </span>
+      </a>
+
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="links-footer" class="links">
+    <a href="https://github.com/RodrigoRosa7" target="_blank"><img src="assets/github.png" alt="Github"></a>
+    <a href="https://github.com/RodrigoRosa7" target="_blank">Github</a>
+  </div>
+
+  <script src="scripts.js"></script>
+
+{% endblock %}
