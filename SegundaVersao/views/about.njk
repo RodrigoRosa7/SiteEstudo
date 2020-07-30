@@ -1,22 +1,23 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Sobre - Rodrigo da Rosa</title>
+  <title>Sobre - {{about.name}}</title>
 {% endblock %}
 
 {% block content %}
 
   <div id="wrapper">
-    <img src="https://avatars0.githubusercontent.com/u/38890065?s=460&u=1c03c2ec60d6b3f50e260177acaa2bf4ef563514&v=4"
-      alt="Rodrigo">
-    <h1>Rodrigo da Rosa</h1>
-    <h2>Trabalho na <a href="https://secullum.com.br" target="_blank">Secullum Softwares</a></h2>
-    <p>Tentando aprender algo</p>
+    <img src="{{about.avatar_url}}" alt="Imagem de {{about.name}}">
+    <h1>{{about.name}}</h1>
+    <h2>{{about.role}}</h2>
+    <p>{{about.description}}</p>
   </div>
 
   <div id="links-footer" class="links">
-    <a href="https://github.com/RodrigoRosa7" target="_blank"><img src="assets/github.png" alt="Github"></a>
-    <a href="https://github.com/RodrigoRosa7" target="_blank">Github</a>
+    {% for link in about.links %}
+      <a href="{{link.url}}" target="_blank"><img src="{{link.image}}" alt="{{link.name}}"></a>
+      {# <a href="{{link.url}}" target="_blank">{{link.name}}</a> #}
+    {% endfor %}
   </div>
 
 {% endblock %}
