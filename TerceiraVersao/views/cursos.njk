@@ -9,17 +9,11 @@
 
 {% block content %}
   <section class="cursos">
-    <div class="curso" id="starter">
-      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Starter">
+    {% for curso in cursos %}
+    <div class="curso">
+      <img src="{{curso.image}}" alt="{{curso.name}}">
     </div>
-    
-    <div class="curso" id="launchbase">
-      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="Starter">
-    </div>
-
-    <div class="curso" id="gostack">
-      <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="Starter">
-    </div>
+    {% endfor %}
   </section>
 
   <div class="modal-overlay">
@@ -41,6 +35,6 @@
     <a href="https://github.com/RodrigoRosa7" target="_blank">Github</a>
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="/scripts.js"></script>
 
 {% endblock %}

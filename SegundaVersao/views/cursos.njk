@@ -1,38 +1,19 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-  <title>Portfolio - Rodrigo</title>
+  <title>Conteúdos - Estudo exemplo</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-
-  <div id="wrapper">
-    <h1>Projetos</h1>
-  </div>
-
-  <section class="cards">
-
-    {% for item in items %}
-    <div class="card" id="{{item.id}}">
-      <div class="card__image-container {{'featured-wrapper' if item.featured}}">
-        <img src="assets/siteProprio.png" alt="Imagem de {{item.title}}">
-        {% if item.featured %}
-          <div class="featured">Featured</div>
-        {% endif %}
-      </div>
-
-      <div class="card__content">
-        <p>{{item.title}}</p>
-      </div>
-
-      <div class="card__info">
-        <p>{{item.duration}}</p>
-        <p class="card__price">{{item.price}}</p>
-      </div>
+  <section class="cursos">
+    {% for curso in cursos %}
+    <div class="curso">
+      <img src="{{curso.image}}" alt="{{curso.name}}">
     </div>
     {% endfor %}
-    
   </section>
 
   <div class="modal-overlay">
@@ -49,12 +30,11 @@
     </div>
   </div>
 
-  
   <div id="links-footer" class="links">
     <a href="https://github.com/RodrigoRosa7" target="_blank"><img src="assets/github.png" alt="Github"></a>
     <a href="https://github.com/RodrigoRosa7" target="_blank">Github</a>
   </div>
 
   <script src="scripts.js"></script>
-  
+
 {% endblock %}
